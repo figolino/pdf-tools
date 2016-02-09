@@ -26,9 +26,9 @@ bind address and port for the renderer
 Document root will be used as root for all the stuff witch is referenced in the HTML input (like pictures .....)
 
 ## The Renderer runs as an server
-com.swisssign.pdftools.server.receiptRenderer.bindAddress=127.0.0.1
-com.swisssign.pdftools.server.receiptRenderer.bindPort=5080
-com.swisssign.pdftools.server.receiptRenderer.documentRoot=https://localhost/
+ch.figolino.pdftools.server.receiptRenderer.bindAddress=127.0.0.1
+ch.figolino.pdftools.server.receiptRenderer.bindPort=5080
+ch.figolino.pdftools.server.receiptRenderer.documentRoot=https://localhost/
 
 Signer URL and port witch is called from the renderer if singer Enabled is set and the input HTML contains this HTML tag => <td id="signature">xxxxx</td> the pdf will by singed at this postion of the tag.
 
@@ -36,18 +36,18 @@ To get the singer working locali you can add a etc/hosts entry 127.0.0.1 local.i
 
 ## Remote (or on the same machine) running Signer. The ssl certificate alternative name needs to match
 ## with the hostname provided here
-com.swisssign.pdftools.server.receiptRenderer.signerEnabled=1
-com.swisssign.pdftools.server.receiptRenderer.signerUrl=https://localhost:6080/sign
+ch.figolino.pdftools.server.receiptRenderer.signerEnabled=1
+ch.figolino.pdftools.server.receiptRenderer.signerUrl=https://localhost:6080/sign
 
 Importatn add Integer value of the renderer server web certificate be aware not all online converter will work since the serial nummber can get big! (working one; ​http://www.mathsisfun.com/binary-decimal-hexadecimal-converter.html )
 
 ## Reference to receiptRenderer configuration. The Renderer comes with a certificate where its serial needs
 ## to get entered here at allowedSerials
 ## The Signer runs as an server
-com.swisssign.pdftools.server.receiptSigner.allowedSerials=2564229076454579447886772018993221
-com.swisssign.pdftools.server.receiptSigner.bindAddress=127.0.0.1
-com.swisssign.pdftools.server.receiptSigner.bindPort=6080
-com.swisssign.pdftools.server.receiptSigner.threads=20
+ch.figolino.pdftools.server.receiptSigner.allowedSerials=2564229076454579447886772018993221
+ch.figolino.pdftools.server.receiptSigner.bindAddress=127.0.0.1
+ch.figolino.pdftools.server.receiptSigner.bindPort=6080
+ch.figolino.pdftools.server.receiptSigner.threads=20
 
 to kill the running server => netstat -tulpn | grep 5080 => kill XXXXX
 to kill the running server => netstat -tulpn | grep 6080 => kill XXXXX

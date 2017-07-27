@@ -7,7 +7,7 @@ The PDF renderer / signer service is based on Itext PDF rendering framework. The
 
     https://localhost:6080/monitoring
     https://localhost:6080/login
-    https://localhost:6080/sign 
+    https://localhost:6080/sign  
 
 Installation
 
